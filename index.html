@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reddit Demo</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/material-design-lite/material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/custom.css">
+    <link rel="stylesheet" type="text/css" href="styles/default.css">
+    <script type="text/javascript" src="bower_components/material-design-lite/material.min.js"></script>
+</head>
+
+<body>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout container">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row header-top">
+                <!-- Title -->
+                <span class="mdl-layout-title">Reddit India</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                </nav>
+            </div>
+            <div class="header-bottom">
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Reddit India</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+        </div>
+        <main class="">
+            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect ">
+                <div class="mdl-tabs__tab-bar main-tabs">
+                    <a href="#starks-panel" class="mdl-tabs__tab is-active">Starks</a>
+                    <a href="#lannisters-panel" class="mdl-tabs__tab">Lannisters</a>
+                    <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a>
+                </div>
+            </div>
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col">
+                    <div class="thread">
+                        <div class="mdl-card mdl-shadow--2dp">
+                            <div class="voter">
+                                <div class="up">
+                                    <i class="material-icons">keyboard_arrow_up</i>
+                                </div>
+                                <div class="number">45</div>
+                                <div class="down">
+                                    <i class="material-icons">keyboard_arrow_down</i>
+                                </div>
+                            </div>
+                            <div class="icon">
+                                <i class="material-icons">description</i>
+                            </div>
+                            <div class="thread content">
+                                <div class="main-text">
+                                    <span class="status">Submitted</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <span class="light">light</span>
+                                    <span class="dark">dark</span>
+                                    <span class="light">by</span>
+                                    <a href="#">Someone</a>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <span class="dark">151 Comments</span>
+                                    <a href="#">Share</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thread">
+                        <div class="mdl-card mdl-shadow--2dp">
+                            <div class="voter">
+                                <div class="up">
+                                    <i class="material-icons">keyboard_arrow_up</i>
+                                </div>
+                                <div class="number">45</div>
+                                <div class="down">
+                                    <i class="material-icons">keyboard_arrow_down</i>
+                                </div>
+                            </div>
+                            <div class="icon">
+                                <img src="images/news.jpeg">
+                            </div>
+                            <div class="thread content">
+                                <div class="main-text">
+                                    <span class="status">Submitted</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <span class="light">light</span>
+                                    <span class="dark">dark</span>
+                                    <span class="light">by</span>
+                                    <a href="#">Someone</a>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <span class="dark">151 Comments</span>
+                                    <a href="#">Share</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="login">
+                        <div class="mdl-card mdl-shadow--2dp remove-card-default">
+                            <form>
+                                <div class="mdl-textfield">
+                                    <input class="mdl-textfield__input" type="text" id="sample1" placeholder="Enter your email">
+                                </div>
+                                <div class="mdl-textfield">
+                                    <input class="mdl-textfield__input" type="password" placeholder="Enter your password">
+                                </div>
+                                <div>
+                                    <input class="mdl-textfield__checkbox" type="checkbox">
+                                </div>
+                                <div class="text-center">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                        Login
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- links -->
+                    <div class="links mt-10">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mt-10">
+                            <i class="material-icons">add</i>Submit a new link
+                        </button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mt-10">
+                            <i class="material-icons">add</i>Submit a new text post
+                        </button>
+                    </div>
+                    <!-- other -->
+                    <div class="other-links">
+                        <div class="mdl-card remove-card-default mdl-shadow--2dp mt-20">
+                            <div class="links-header">
+                                link header
+                            </div>
+                            <ul class=" mdl-list">
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                  <a href="#"> New links</a>
+                                </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                  Aaron Paul
+                                </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                  Bob Odenkirk
+                                </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="other-links">
+                        <div class="mdl-card remove-card-default mdl-shadow--2dp mt-20">
+                            <div class="links-header">
+                                link header
+                            </div>
+                            <ul class=" mdl-list">
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                  <a href="#"> New links</a>
+                                </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                  Aaron Paul
+                                </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                  Bob Odenkirk
+                                </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="other-links">
+                        <div class="mdl-card remove-card-default mdl-shadow--2dp mt-20">
+                            <div class="links-header">
+                                link header
+                            </div>
+                            <ul class=" mdl-list">
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                  <a href="#"> New links</a>
+                                </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                  Aaron Paul
+                                </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                  Bob Odenkirk
+                                </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

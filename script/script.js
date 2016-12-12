@@ -7,7 +7,7 @@ var threads = [
 		comments:269,
 		user:'Times of India',
 		date:'1d ago',
-		imageUrl:'book.jpg'
+		imageUrl:'cyclone.jpg',
 	},
 	{
 		title:"82 trains delayed, 16 cancelled due to fog.",
@@ -16,6 +16,7 @@ var threads = [
 		comments:120,
 		user:'Assu Deepu',
 		date:'20hr ago',
+		imageUrl:'train.jpg',
 	},
 	{
 		title:"Note ban scripts trouble for Sunday book market",
@@ -24,6 +25,7 @@ var threads = [
 		comments:103,
 		user:'Anil',
 		date:'23hr ago',
+		imageUrl:'book.jpg',
 	},
 	{
 		title:"Metro finances to be hit if fares not hiked",
@@ -32,6 +34,7 @@ var threads = [
 		comments:150,
 		user:'Jose',
 		date:'10hr ago',
+		imageUrl:'metro.jpg',
 	},
 	{
 		title:"6-year-old leopard found dead in Adilabad district",
@@ -40,6 +43,7 @@ var threads = [
 		comments:180,
 		user:'Bagha',
 		date:'1day ago',
+		imageUrl:'leopard.jpg',
 	},
 	{
 		title:"Potato prices drop as cold storages clear stock",
@@ -48,6 +52,8 @@ var threads = [
 		comments:191,
 		user:'Bataka',
 		date:'18hr ago',
+		imageUrl:'potato.jpg',
+
 	},
 	{
 		title:"Drinking water remains a luxury in key Old City areas in Hyderabad",
@@ -56,6 +62,7 @@ var threads = [
 		comments:164,
 		user:'Assu Deepu',
 		date:'15hr ago',
+		imageUrl:'water.jpg',
 	},
 	{
 		title:"RBI against government's proposal to dramatically lower charges on debit card transactions",
@@ -64,6 +71,7 @@ var threads = [
 		comments:170,
 		user:'Ashutosh',
 		date:'20hr ago',
+		imageUrl:'rbi.jpg',
 	},
 	{
 		title:"Ratan Tata hailed as saviour of UK steel industry",
@@ -72,6 +80,8 @@ var threads = [
 		comments:150,
 		user:'Anthoine',
 		date:'15hr ago',
+		imageUrl:'tata.jpg',
+
 	},
 	{
 		title:"Telangana to tweak consent norm in land acquisition bill",
@@ -80,6 +90,7 @@ var threads = [
 		comments:110,
 		user:'Vital',
 		date:'21hr ago',
+		imageUrl:'telengana.jpg',
 	},
 	{
 		title:"Virat Kohli, Ravindra Jadeja put India on path for series win",
@@ -88,6 +99,7 @@ var threads = [
 		comments:190,
 		user:'Satyajit',
 		date:'12hr ago',
+		imageUrl:'cricket.jpg',
 	},
 	{
 		title:"Indian Aces end runner-up again, lose IPTL final to Slammers",
@@ -96,6 +108,7 @@ var threads = [
 		comments:140,
 		user:'Assu',
 		date:'13hr ago',
+		imageUrl:'aces.jpg',
 	},
 	
 ]
@@ -119,9 +132,9 @@ function threadCreator(data){
 		var down = ce('div','down');
 		var icon = ce('div','icon');
 		var iconImage = ce('img');
-		if(data.image)
+		if(data.imageUrl)
 		{
-			iconImage.src = data.image;
+			iconImage.src = 'images/'+data.imageUrl;
 			icon.appendChild(iconImage);	
 		}
 		else

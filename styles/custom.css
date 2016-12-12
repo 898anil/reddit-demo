@@ -1,3 +1,11 @@
+body
+{
+  background: #ededed;  
+}
+.main-tabs-cont
+{
+  background: white;
+}
 .demo-layout-transparent .mdl-layout__header,
 .demo-layout-transparent .mdl-layout__drawer-button {
   color: white;

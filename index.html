@@ -3,10 +3,13 @@
 
 <head>
     <title>Reddit Demo</title>
+    <meta name="viewport" content="width=device">
     <link rel="stylesheet" type="text/css" href="bower_components/material-design-lite/material.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/custom.css">
     <link rel="stylesheet" type="text/css" href="styles/default.css">
+    <link rel="stylesheet" type="text/css" href="styles/custom.css">
+    <script type="text/javascript" src="script/script.js"></script>
+
     <script type="text/javascript" src="bower_components/material-design-lite/material.min.js"></script>
 </head>
 
@@ -14,20 +17,17 @@
     <div class="demo-layout-transparent mdl-layout mdl-js-layout container">
         <header class="mdl-layout__header mdl-layout__header--transparent">
             <div class="mdl-layout__header-row header-top">
-                <!-- Title -->
                 <span class="mdl-layout-title">Reddit India</span>
-                <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Videos</a>
+                    <a class="mdl-navigation__link" href="">Pics</a>
+                    <a class="mdl-navigation__link" href="">News</a>
+                    <a class="mdl-navigation__link" href="">Funny</a>
+                    <a class="mdl-navigation__link" href="">Television</a>
+                    <a class="mdl-navigation__link" href="">Jokes</a>
+                    <a class="mdl-navigation__link" href="">GIFs</a>
+                    <a class="mdl-navigation__link" href="">Worldnews</a>
                 </nav>
             </div>
             <div class="header-bottom">
@@ -36,22 +36,27 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Reddit India</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Videos</a>
+                <a class="mdl-navigation__link" href="">Pics</a>
+                <a class="mdl-navigation__link" href="">News</a>
+                <a class="mdl-navigation__link" href="">Funny</a>
+                <a class="mdl-navigation__link" href="">Television</a>
+                <a class="mdl-navigation__link" href="">Jokes</a>
+                <a class="mdl-navigation__link" href="">GIFs</a>
+                <a class="mdl-navigation__link" href="">Worldnews</a>
             </nav>
         </div>
         <main class="">
             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect ">
                 <div class="mdl-tabs__tab-bar main-tabs">
-                    <a href="#starks-panel" class="mdl-tabs__tab is-active">Starks</a>
-                    <a href="#lannisters-panel" class="mdl-tabs__tab">Lannisters</a>
-                    <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a>
+                    <a href="#starks-panel" class="mdl-tabs__tab is-active">Hot news</a>
+                    <a href="#lannisters-panel" class="mdl-tabs__tab">Health & Fitness news</a>
+                    <a href="#targaryens-panel" class="mdl-tabs__tab">Sports news</a>
+                    <a href="#targaryens-panel" class="mdl-tabs__tab">Entertainment news</a>
                 </div>
-            </div>
+            </div   >
             <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--8-col">
+                <div class="mdl-cell mdl-cell--8-col" id="thread-cont">
                     <div class="thread">
                         <div class="mdl-card mdl-shadow--2dp">
                             <div class="voter">
@@ -66,9 +71,40 @@
                             <div class="icon">
                                 <i class="material-icons">description</i>
                             </div>
+                            <div class="content">
+                                <div class="main-text">
+                                    <span class="status">Scheduled</span>Cyclone Vardah: Wind speed to cross 100kmph.
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <span class="light">Submitted</span>
+                                    <span class="dark">1day ago</span>
+                                    <span class="light">by</span>
+                                    <a href="#">Assu</a>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <span class="dark">151 Comments</span>
+                                    <a href="#">Share</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thread">
+                        <div class="mdl-card mdl-shadow--2dp">
+                            <div class="voter">
+                                <div class="up">
+                                    <i class="material-icons">keyboard_arrow_up</i>
+                                </div>
+                                <div class="number">45</div>
+                                <div class="down">
+                                    <i class="material-icons">keyboard_arrow_down</i>
+                                </div>
+                            </div>
+                            <div class="icon">
+                                <img src="images/news.jpeg">
+                            </div>
                             <div class="thread content">
                                 <div class="main-text">
-                                    <span class="status">Submitted</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.
+                                    <span class="status">Submitted</span>82 trains delayed, 16 cancelled due to fog.
                                 </div>
                                 <div class="mdl-card__supporting-text">
                                     <span class="light">light</span>
@@ -83,7 +119,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="thread">
+                     <div class="thread">
                         <div class="mdl-card mdl-shadow--2dp">
                             <div class="voter">
                                 <div class="up">
@@ -149,22 +185,27 @@
                     <div class="other-links">
                         <div class="mdl-card remove-card-default mdl-shadow--2dp mt-20">
                             <div class="links-header">
-                                link header
+                                WELCOME TO Reddit-INDIA
                             </div>
                             <ul class=" mdl-list">
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
-                                  <a href="#"> New links</a>
+                                  <a href="#"> i) What is Reddit?</a>
                                 </span>
                                 </li>
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
-                                  Aaron Paul
+                                  ii) Reddit India Wiki
                                 </span>
                                 </li>
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
-                                  Bob Odenkirk
+                                 iii) Follow us on Twitter - @RedditIndia
+                                </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                 iv) All India related sub-reddits
                                 </span>
                                 </li>
                             </ul>
@@ -173,22 +214,22 @@
                      <div class="other-links">
                         <div class="mdl-card remove-card-default mdl-shadow--2dp mt-20">
                             <div class="links-header">
-                                link header
+                                REQUESTS
                             </div>
                             <ul class=" mdl-list">
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
-                                  <a href="#"> New links</a>
+                                  <a href="#">i) Please see this for further details.</a>
                                 </span>
                                 </li>
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
-                                  Aaron Paul
+                                 ii) Do read the Reddiquette and refrain from personal/vindictive attacks while commenting.
                                 </span>
                                 </li>
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
-                                  Bob Odenkirk
+                                 iii) Please provide translations if comment in languages other than English.
                                 </span>
                                 </li>
                             </ul>
@@ -197,22 +238,32 @@
                      <div class="other-links">
                         <div class="mdl-card remove-card-default mdl-shadow--2dp mt-20">
                             <div class="links-header">
-                                link header
+                                COMMUNITY
                             </div>
                             <ul class=" mdl-list">
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
-                                  <a href="#"> New links</a>
+                                  <a href="#">i) Travel Information</a>
                                 </span>
                                 </li>
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
-                                  Aaron Paul
+                                  ii) State of the Week Threads
                                 </span>
                                 </li>
                                 <li class="mdl-list__item">
                                     <span class="mdl-list__item-primary-content">
-                                  Bob Odenkirk
+                                  iii) IRC
+                                </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                 iv) Special mentions
+                                </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content">
+                                  v) Available rage faces
                                 </span>
                                 </li>
                             </ul>

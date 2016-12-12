@@ -99,10 +99,13 @@ var threads = [
 	},
 	
 ]
-var _ce = document.createElement;
 function ce(tag,className){
-	var ele = _ce(tag);
-	ele.className = className;
+	var ele = document.createElement(tag);
+	if(className)
+	{
+		ele.className = className;	
+	}
+	return ele;
 }
 function threadCreator(data){
 		var thread = ce('div','thread');
@@ -112,19 +115,45 @@ function threadCreator(data){
 		var materialIconsUp = ce('i','material-icons');
 		var materialIconsDown = ce('i','material-icons');
 		var number = ce('div','number');
+		number.innerHTML = data.votes;
 		var down = ce('div','down');
 		var icon = ce('div','icon');
+		var iconImage = ce('img');
+		if(data.image)
+		{
+			iconImage.src = data.image;
+			icon.appendChild(iconImage);	
+		}
+		else
+		{
+			var imageReplaceIcon = ce('i','material-icons');
+			imageReplaceIcon.innerHTML = 'description';
+			icon.appendChild(imageReplaceIcon);	
+		}
 		var content = ce('div','content');
 		var mainText = ce('div','main-text');
 		var status = ce('span','status');
+		var title = ce('span','main-text');
+		title.innerHTML = data.title;
+		status.innerHTML = data.status;
 		var mdlCardSupportingText1 = ce('div','mdl-card__supporting-text');
-		var light1 = ce('span','light');
-		var dark1 = ce('span','dark');
-		var light2 = ce('span','light');
+		var submitted = ce('span','light');
+		submitted.innerHTML = 'submitted';
+		var date = ce('span','dark');
+		date.innerHTML = data.date;
+		var by = ce('span','dark');
+		by.innerHTML ='by';
+		var user = ce('a');
+		user.innerHTML = data.user;
+		
 		var mdlCardSupportingText2 = ce('div','mdl-card__supporting-text');
-		var dark2 = ce('span','dark');
-		var link1 = ce('a');
-		var link2 = ce('a');
+		var comments = ce('span','dark');
+		comments.innerHTML = data.comments + " comments";
+		user.innerHTML = data.user;
+		var share = ce('a');
+		share.innerHTML = 'Share';
+
+		
 		thread.appendChild(mainCard);
 		mainCard.appendChild(voter);
 		mainCard.appendChild(icon);
@@ -141,14 +170,22 @@ function threadCreator(data){
 		content.appendChild(mdlCardSupportingText1);
 		content.appendChild(mdlCardSupportingText2);
 		mainText.appendChild(status);
-		mdlCardSupportingText1.appendChild(light1);
-		mdlCardSupportingText1.appendChild(light2);
-		mdlCardSupportingText1.appendChild(dark1);
-		mdlCardSupportingText1.appendChild(link1);
-		mdlCardSupportingText2.appendChild(dark2);
-		mdlCardSupportingText2.appendChild(link2);
-		console.log(thread);
+		mainText.appendChild(title);
+		mdlCardSupportingText1.appendChild(submitted);
+		mdlCardSupportingText1.appendChild(date);
+		mdlCardSupportingText1.appendChild(by);
+		mdlCardSupportingText1.appendChild(user);
+		mdlCardSupportingText2.appendChild(comments);
+		mdlCardSupportingText2.appendChild(share);
 		return thread;
 	}
-	threads.forEach(threadCreator)
+	window.onload = function(){
+		var threadContent = document.getElementById('thread-cont');
+		threads.forEach(function(data){
+			var threadEle = threadCreator(data);
+			threadContent.appendChild(threadEle);
+		})	
+	}
+	
+	
 })();
